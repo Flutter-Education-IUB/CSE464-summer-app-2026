@@ -1,17 +1,4 @@
-# summer_iub_app
+# CSE464 SUMMER 
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# CSE464-summer-app-2026
+## Introduction
+This is a class by class project for the students of Section 1 & 2 usable for the summer 2026 sementer
