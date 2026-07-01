@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:summer_iub_app/screens/coffe_records_screen.dart';
-import 'package:summer_iub_app/utility/constant.dart';
+import 'package:summer_iub_app/screens/create_coffee_record_screen.dart';
+import 'package:summer_iub_app/state_management/coffee_state_management.dart';
 import 'package:summer_iub_app/widgets/app_backgroud_design_widget.dart';
 
 // ACM
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
 
 
   int _coffeeCount = 0;
+  final CoffeeStateManagement coffeeStateManagement = CoffeeStateManagement();
 
   void incrememntCoffeeCount() {
     _coffeeCount++;
@@ -29,7 +31,12 @@ class _HomePageState extends State<HomePage> {
 
   void navigateToCoffeeRecordsScreen() {
    Navigator.of(context)
-   .push(MaterialPageRoute(builder: (context) => const CoffeRecordsScreen()));
+   .push(MaterialPageRoute(builder: (context) =>  CoffeRecordsScreen(coffeeStateManagement: coffeeStateManagement,)));
+  }
+
+   void navigateToCreateCoffeeRecordScreen() {
+   Navigator.of(context)
+   .push(MaterialPageRoute(builder: (context) =>  CreateCoffeeRecordScreen(coffeeStateManagement: coffeeStateManagement,)));
   }
 
 
@@ -124,7 +131,9 @@ class _HomePageState extends State<HomePage> {
                         // ),
       
                         ElevatedButton.icon(
-                          onPressed:(){},
+                          onPressed:(){
+                            navigateToCreateCoffeeRecordScreen();
+                          },
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(
                               horizontal: 50.00,
